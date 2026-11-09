@@ -28,7 +28,8 @@ Render the profile as one English sentence and paste it verbatim into every prom
 - Mystery / neon: low, slower, intimate.
 - Kids / paper cutout: bright, friendly, slightly higher.
 - Ink wash / history: steady, measured, storyteller.
-- Comic / pixel: energetic, punchy, faster.
+- Clay: playful, bright, lively pace.
+- Watercolor storybook: soft, warm, slow, bedtime-story intimacy.
 
 ## TTS tip
 

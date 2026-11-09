@@ -100,6 +100,9 @@ def hat(kind, line):
                     f'<path d="M-20 -157 h40" stroke="#ef4444" stroke-width="4"/>',
         "ponytail": f'<path d="M-28 -142 q8 -26 36 -18 q18 6 22 22 q-16 -16 -58 -4z" fill="{line}"/>'
                     f'<path d="M26 -150 q22 0 18 30 q-8 -16 -18 -18z" fill="{line}"/>',
+        "cap": f'<path d="M-28 -142 a28 26 0 0 1 56 0 z" fill="#3b82f6" stroke="{line}" stroke-width="2.5"/>'
+               f'<path d="M20 -144 q22 -2 30 6 q-14 4 -30 2z" fill="#2563eb" stroke="{line}" stroke-width="2.5"/>'
+               f'<circle cx="0" cy="-168" r="3.5" fill="#2563eb"/>',
         "glasses": f'<g fill="none" stroke="{line}" stroke-width="2"><circle cx="-10" cy="-133" r="8"/><circle cx="10" cy="-133" r="8"/><path d="M-2 -134 h4 M-18 -134 l-11 -3 M18 -134 l11 -3"/></g>',
     }.get(kind, "")
 
@@ -271,52 +274,30 @@ def s7():
     return svg(b, d)
 
 
-SPRITE_HEAD = [
-    ".....KKKKKK.....",
-    "...KKWWWWWWKK...",
-    "..KWWWWWWWWWWK..",
-    ".KRRRRRRRRRRRRKR",
-    ".KWWWKWWWWKWWWKR",
-    ".KWWWKWWWWKWWWK.",
-    ".KWPWWWWWWWWPWK.",
-    ".KWWWKWWWWKWWWK.",
-    "..KWWWKKKKWWWK..",
-    "...KKWWWWWWKK...",
-    ".....KKKKKK.....",
-    ".......KK.......",
-    "....BBBBBBBB....",
-    "..KKBBBBBBBBKK..",
-    ".K..BBBBBBBB..K.",
-    "KK..BBBBBBBB..KK",
-]
-LEGS_A = [".....KK..KK.....", ".....KK..KK.....", "....KKK..KKK...."]
-LEGS_B = ["....KK....KK....", "...KK......KK...", "..KKK......KKK.."]
-PIX = {"K": "#111", "W": "#fff", "R": "#dc2626", "B": "#2563eb", "P": "#fda4af"}
-
-
-def sprite(rows, x, y, p):
-    return "".join(f'<rect x="{x+c*p}" y="{y+r*p}" width="{p}" height="{p}" fill="{PIX[ch]}"/>'
-                   for r, row in enumerate(rows) for c, ch in enumerate(row) if ch in PIX)
-
-
 def s8():
-    b = f'<rect width="{W}" height="{H}" fill="#5eb2ff"/>'
-    for cx, cy in [(60, 30), (300, 40)]:
-        for dx, dy, n in [(20, 0, 5), (10, 10, 7), (0, 20, 9)]:
-            b += f'<rect x="{cx+dx}" y="{cy+dy}" width="{n*10}" height="10" fill="#fff"/>'
-    for i in range(0, W, 40):
-        b += (f'<rect x="{i}" y="220" width="40" height="10" fill="#22c55e"/><rect x="{i}" y="230" width="40" height="40" fill="#a16207"/>'
-              f'<rect x="{i+6}" y="238" width="12" height="8" fill="#854d0e"/>')
-    b += '<rect x="290" y="110" width="40" height="40" fill="#f59e0b"/><rect x="304" y="118" width="12" height="18" fill="#fde68a"/><rect x="304" y="140" width="12" height="4" fill="#fde68a"/>'
-    for i, x in enumerate([370, 405, 440]):
-        b += f'<g class="pop" style="animation-delay:{i*.2}s"><rect x="{x}" y="150" width="14" height="20" fill="#facc15"/><rect x="{x+4}" y="154" width="6" height="12" fill="#fef08a"/></g>'
-    b += '<g class="pop"><rect x="200" y="190" width="30" height="30" fill="#7c3aed"/><rect x="205" y="198" width="6" height="6" fill="#fff"/><rect x="219" y="198" width="6" height="6" fill="#fff"/></g>'
-    p, x0, y0 = 7, 90, 220 - 19 * 7
-    b += (f'<g>{sprite(SPRITE_HEAD, x0, y0, p)}'
-          f'<g>{sprite(LEGS_A, x0, y0 + 16 * p, p)}<animate attributeName="opacity" values="1;0" dur=".5s" calcMode="discrete" repeatCount="indefinite"/></g>'
-          f'<g opacity="0">{sprite(LEGS_B, x0, y0 + 16 * p, p)}<animate attributeName="opacity" values="0;1" dur=".5s" calcMode="discrete" repeatCount="indefinite"/></g>'
-          '<animateTransform attributeName="transform" type="translate" values="0 0;0 -14;0 0;0 0" dur="1.6s" calcMode="discrete" repeatCount="indefinite"/></g>')
-    return svg(b, extra_attr=' shape-rendering="crispEdges"')
+    d = ('<radialGradient id="clayBg" cx=".5" cy=".35" r=".8"><stop offset="0" stop-color="#fde4c8"/><stop offset="1" stop-color="#f4b98a"/></radialGradient>'
+         '<radialGradient id="clayHead" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f5f1ea"/><stop offset="1" stop-color="#d9d2c5"/></radialGradient>'
+         '<filter id="clay" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="b"/>'
+         '<feSpecularLighting in="b" surfaceScale="4" specularConstant=".55" specularExponent="16" lighting-color="#fff" result="sp"><fePointLight x="80" y="-60" z="160"/></feSpecularLighting>'
+         '<feComposite in="sp" in2="SourceAlpha" operator="in" result="sp2"/>'
+         '<feComposite in="SourceGraphic" in2="sp2" operator="arithmetic" k2="1" k3=".6"/>'
+         '<feDropShadow dx="2" dy="5" stdDeviation="3" flood-color="#7c2d12" flood-opacity=".3"/></filter>'
+         '<filter id="thumb"><feTurbulence baseFrequency=".9" numOctaves="1" seed="4"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 -.2"/>'
+         '<feComposite in2="SourceGraphic" operator="in"/></filter>')
+    b = f'<rect width="{W}" height="{H}" fill="url(#clayBg)"/>'
+    b += f'<path d="M0 200 Q240 186 480 200 V270 H0z" fill="#d9784a" filter="url(#clay)"/>'
+    b += f'<rect width="{W}" height="{H}" fill="#7c2d12" filter="url(#thumb)" opacity=".18"/>'
+    b += ('<g filter="url(#clay)">'
+          '<g class="pop"><circle cx="410" cy="60" r="26" fill="#facc15"/></g>'
+          '<g><animateTransform attributeName="transform" type="translate" values="0 0;12 0;0 0" dur="6s" repeatCount="indefinite"/>'
+          '<ellipse cx="70" cy="58" rx="34" ry="16" fill="#e0f2fe"/><circle cx="58" cy="48" r="16" fill="#e0f2fe"/><circle cx="82" cy="46" r="13" fill="#e0f2fe"/></g>'
+          '<rect x="356" y="188" width="44" height="34" rx="8" fill="#c2410c"/>'
+          '<rect x="370" y="128" width="16" height="64" rx="8" fill="#4ade80"/><rect x="348" y="146" width="14" height="30" rx="7" fill="#4ade80"/>'
+          '<rect x="356" y="168" width="20" height="12" rx="6" fill="#4ade80"/><rect x="392" y="140" width="14" height="28" rx="7" fill="#4ade80"/>'
+          '<rect x="382" y="158" width="18" height="12" rx="6" fill="#4ade80"/><circle class="pop" cx="378" cy="124" r="6" fill="#f472b6"/>'
+          '<g class="pop"><circle cx="270" cy="196" r="14" fill="#60a5fa"/><circle cx="300" cy="200" r="10" fill="#facc15"/></g></g>')
+    b += (f'<g filter="url(#clay)">{character(170, 228, .95, line="#3f3f46", skin="url(#clayHead)", shade="", mood="happy", pose="wave", top="cap", wear="tee", wear_color="#4ade80", w=9, hand_r=8, blush=True, shadow="")}</g>')
+    return svg(b, d)
 
 
 def s9():
@@ -337,25 +318,34 @@ def s9():
 
 
 def s10():
-    d = '<pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2.4" fill="#000" opacity=".22"/></pattern>'
-    rays = ""
-    for a in range(0, 360, 20):
-        r1, r2 = math.radians(a), math.radians(a + 10)
-        rays += f'<path d="M240 135 L{240+600*math.cos(r1):.0f} {135+600*math.sin(r1):.0f} L{240+600*math.cos(r2):.0f} {135+600*math.sin(r2):.0f}Z" fill="#ef4444"/>'
-    b = f'<rect width="{W}" height="{H}" fill="#fde047"/>{rays}<rect width="{W}" height="{H}" fill="url(#dots)"/>'
-    for y in range(40, 240, 26):
-        b += f'<line class="blink" x1="20" y1="{y}" x2="100" y2="{y}" stroke="#fff" stroke-width="4" style="animation-delay:{y/200:.2f}s"/>'
-    b += ('<g class="pop"><path d="M380 55 l15 30 l32 -6 l-20 26 l22 24 l-32 -2 l-8 32 l-14 -28 l-30 10 l14 -28 l-24 -20 l32 -2z" '
-          'fill="#fff" stroke="#111" stroke-width="5"/></g>')
-    impact = '<path d="M66 -104 l12 -6 M68 -88 h14 M66 -72 l12 6" stroke="#111" stroke-width="4" stroke-linecap="round"/>'
-    b += character(230, 240, 1.0, w=7, mood="determined", pose="point", wear="scarf", wear_color="#facc15", prop=impact,
-                   hand_r=8, top="tuft")
-    b += f'<rect x="4" y="4" width="{W-8}" height="{H-8}" fill="none" stroke="#111" stroke-width="8"/>'
+    d = ('<filter id="wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="4" seed="9" result="n"/>'
+         '<feDisplacementMap in="SourceGraphic" in2="n" scale="16" result="d"/><feGaussianBlur in="d" stdDeviation="1.6"/></filter>'
+         '<filter id="pencil"><feTurbulence baseFrequency=".8" numOctaves="1" seed="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.6"/></filter>'
+         '<filter id="paper"><feTurbulence baseFrequency=".7" numOctaves="3" seed="5"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .45  0 0 0 0 .3  0 0 0 .35 -.1"/></filter>')
+    b = f'<rect width="{W}" height="{H}" fill="#fbf7ef"/>'
+    b += ('<g filter="url(#wc)" opacity=".75">'
+          '<ellipse cx="240" cy="40" rx="280" ry="70" fill="#bfdbfe" opacity=".7"/>'
+          '<ellipse cx="380" cy="70" rx="70" ry="30" fill="#e0e7ff" opacity=".8"/>'
+          '<path d="M-20 215 Q120 170 260 205 T500 195 V290 H-20z" fill="#a7c4a0"/>'
+          '<path d="M-20 240 Q160 215 320 242 T500 236 V290 H-20z" fill="#86a97f"/>'
+          '<rect x="392" y="120" width="14" height="95" fill="#a16207" opacity=".7"/>'
+          '<circle cx="399" cy="104" r="44" fill="#86a97f"/><circle cx="372" cy="124" r="26" fill="#a7c4a0"/><circle cx="428" cy="122" r="28" fill="#6b8f63"/>'
+          '<circle cx="70" cy="222" r="8" fill="#f9a8d4"/><circle cx="96" cy="230" r="7" fill="#fca5a5"/><circle cx="310" cy="232" r="7" fill="#f9a8d4"/></g>')
+    for i, x in enumerate(range(30, 480, 38)):
+        y0 = (i * 37) % 120
+        b += (f'<line x1="{x}" y1="{y0}" x2="{x-4}" y2="{y0+12}" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" opacity=".8">'
+              f'<animateTransform attributeName="transform" type="translate" values="0 -40;-16 200" dur="{1.6 + (i % 3) * .3:.1f}s" repeatCount="indefinite"/></line>')
+    umbrella = ('<path d="M40 -78 L-14 -178" stroke="#57534e" stroke-width="3" stroke-linecap="round"/>'
+                '<path d="M40 -78 q0 8 -8 8" stroke="#57534e" stroke-width="3" fill="none" stroke-linecap="round"/>'
+                '<path d="M-76 -172 Q-14 -232 48 -172 Q32 -182 17 -172 Q2 -182 -14 -172 Q-30 -182 -45 -172 Q-60 -182 -76 -172z" fill="#ef4444" opacity=".85" stroke="#7f1d1d" stroke-width="2"/>'
+                '<path d="M-14 -205 v-8" stroke="#57534e" stroke-width="3" stroke-linecap="round"/>')
+    b += (f'<g filter="url(#pencil)">{character(200, 236, .9, line="#57534e", skin="#fffdf8", shade="#f3e6d3", mood="happy", pose="hold", top="tuft", wear="hoodie", wear_color="#fcd34d", w=4, blush=True, prop=umbrella, walk=True, shadow="rgba(87,83,78,.15)")}</g>')
+    b += f'<rect width="{W}" height="{H}" filter="url(#paper)" opacity=".35"/>'
     return svg(b, d)
 
 
 STYLES = {"s1-ink": s1, "s2-flat-pop": s2, "s3-chalkboard": s3, "s4-whiteboard": s4, "s5-neon-night": s5,
-          "s6-paper-cutout": s6, "s7-ink-wash": s7, "s8-pixel-arcade": s8, "s9-blueprint": s9, "s10-comic-halftone": s10}
+          "s6-paper-cutout": s6, "s7-ink-wash": s7, "s8-clay": s8, "s9-blueprint": s9, "s10-watercolor": s10}
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)

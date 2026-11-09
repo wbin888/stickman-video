@@ -24,7 +24,7 @@ Required before planning:
 
 1. **Source** – topic, article, script, outline or link text.
 2. **Aspect ratio** – `16:9` (YouTube/B站横屏) or `9:16` (抖音/Shorts/Reels 竖屏).
-3. **Visual style** – one entry from [style catalog](references/style-catalog.md): `S1 Ink` (light/dark), `S2 Flat Pop`, `S3 Chalkboard`, `S4 Whiteboard`, `S5 Neon Night`, `S6 Paper Cutout`, `S7 Ink Wash`, `S8 Pixel Arcade`, `S9 Blueprint`, `S10 Comic Halftone`.
+3. **Visual style** – one entry from [style catalog](references/style-catalog.md): `S1 Ink` (light/dark), `S2 Flat Pop`, `S3 Chalkboard`, `S4 Whiteboard`, `S5 Neon Night`, `S6 Paper Cutout`, `S7 Ink Wash`, `S8 Clay Stop-Motion`, `S9 Blueprint`, `S10 Watercolor Storybook`.
 
 Defaults when omitted (state them, don't ask):
 

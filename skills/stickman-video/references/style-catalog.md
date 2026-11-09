@@ -13,9 +13,9 @@ Quick menu to show users when style is missing:
 | S5 | 霓虹暗夜 | Neon Night | 深色城市夜景 + 发光霓虹线条人，科技/悬疑/赛博 |
 | S6 | 纸片剪贴 | Paper Cutout | 卡纸剪贴层次 + 定格动画感，温暖故事/童趣 |
 | S7 | 水墨国风 | Ink Wash | 宣纸留白 + 水墨晕染，历史/哲理/东方故事 |
-| S8 | 像素街机 | Pixel Arcade | 16-bit 像素场景 + 游戏化关卡，成长/挑战/游戏梗 |
+| S8 | 粘土定格 | Clay Stop-Motion | 橡皮泥质感 + 微缩场景 + 定格动画，有趣的生活/产品/知识小剧场 |
 | S9 | 工程蓝图 | Blueprint | 蓝图网格 + 白色技术线稿，工程/机制/拆解原理 |
-| S10 | 美漫网点 | Comic Halftone | 粗黑描边 + 网点阴影 + 动感速度线，热血/反转/冲突 |
+| S10 | 水彩绘本 | Watercolor Storybook | 纸纹水彩晕染 + 柔和铅笔线，治愈故事/情感/睡前故事 |
 
 ## Character design grammar (all styles)
 
@@ -102,16 +102,15 @@ Describe moods and poses in beats, never redesign the face or proportions betwee
 - **Music**: guzheng / xiao flute / soft drums; SFX: brush swish, water drip, wind.
 - **Negatives**: no readable Chinese characters or calligraphy text, no seal text, no anime faces, no saturated modern colors, no 3D.
 
-## S8 · Pixel Arcade（像素街机）
+## S8 · Clay Stop-Motion（粘土定格）
 
-- **Best for**: growth stories, challenges/levels, gaming culture, habit building, "boss fight" metaphors.
-- **Style anchor**: `Retro 16-bit pixel-art side-scrolling game style, crisp large pixels with no anti-aliasing, limited color palette, parallax pixel backgrounds, chunky pixel props like coins, hearts and treasure chests, smooth but stepped sprite animation.`
-- **Character anchor**: `A chibi pixel-art stick character sprite: an oversized round white pixel head with black pixel outline, two tall black pixel eyes, pink pixel cheeks and a wide pixel smile, a red pixel headband with a short tail, a small blue pixel shirt, thin black pixel limbs, two-frame walking animation.`
-- **Palette**: red headband = hero; gold = reward/coins; purple = enemy/obstacle; green = progress/health.
-- **Motion**: jump arcs, coin pops, hit-flash on impact, screen shake on big beats, level-transition wipes.
-- **Music**: chiptune 8/16-bit loop; SFX: jump blips, coin pings, power-up arpeggios.
-- **Negatives**: no HUD text or score numbers, no real game characters or logos, no blurry pixels, no 3D.
-
+- **Best for**: playful everyday stories, product demos, kids' science, light comedy sketches.
+- **Style anchor**: `Claymation stop-motion style, handmade plasticine characters and props on a miniature tabletop set, soft rounded shapes with subtle fingerprint texture and specular highlights, warm studio lighting with soft contact shadows, shallow depth of field, slightly stepped 12 fps stop-motion movement.`
+- **Character anchor**: `A clay stick character: an oversized smooth off-white plasticine round head with a soft highlight, glossy black bead eyes with tiny white highlights, rolled-clay eyebrows and a carved smiling mouth with pink cheeks, a small blue clay baseball cap, a short leaf-green clay T-shirt over a thick rolled charcoal-clay body, thick rounded charcoal-clay limbs with bent elbows and knees, small ball hands and bean-shaped feet.`
+- **Palette**: leaf green = hero; terracotta orange = setting/warmth; sky blue = calm/solution; sunny yellow = reward/idea.
+- **Motion**: stepped 12 fps movement, squash-and-stretch on jumps, props pop in as clay balls and morph into shapes, small boiling texture between frames.
+- **Music**: playful marimba / ukulele / whistling; SFX: squishy clay pops, wooden knocks, soft boing.
+- **Negatives**: no glossy CGI plastic, no photoreal humans, no sharp vector edges, no text on props.
 ## S9 · Blueprint（工程蓝图）
 
 - **Best for**: how things work, engineering, systems, business models, step-by-step mechanisms.
@@ -122,16 +121,15 @@ Describe moods and poses in beats, never redesign the face or proportions betwee
 - **Music**: minimal electronic ticking, soft synth arps; SFX: drafting pen scratch, mechanical clicks, whoosh on assemble.
 - **Negatives**: no readable labels, numbers or measurements, no photoreal machinery, no extra limbs.
 
-## S10 · Comic Halftone（美漫网点）
+## S10 · Watercolor Storybook（水彩绘本）
 
-- **Best for**: high-energy twists, conflicts, myths debunked, motivational punchlines.
-- **Style anchor**: `American comic book style 2D animation, thick bold black outlines, halftone dot shading, dramatic speed lines and radial burst backgrounds on key beats, slightly off-register print colors, panel-like framing with strong angles.`
-- **Character anchor**: `A bold comic stick figure with an oversized white round head with a thick black outline, fierce angled eyebrows, glossy determined eyes and a gritted toothy grin, a hair tuft, a flowing yellow scarf around the neck, thick black limbs with bent elbows and knees, large solid round fists.`
-- **Palette**: yellow scarf = hero; primary red = conflict/impact; cyan = calm/solution; halftone grey for shadows.
-- **Motion**: smash zooms, impact freeze-frames (hold 4–6 frames), panel-slide transitions, radial burst on reveals.
-- **Music**: punchy rock / orchestral hits; SFX: whoosh, punch thuds, stinger on reveal (no onomatopoeia text drawn on screen).
-- **Negatives**: no readable onomatopoeia or captions, no speech balloons, no existing superhero costumes or logos.
-
+- **Best for**: healing stories, emotions and relationships, bedtime stories, gentle life lessons.
+- **Style anchor**: `Children's picture-book watercolor illustration style 2D animation on textured cold-press paper, soft wet-on-wet washes with blooming edges and visible pigment granulation, delicate graphite pencil outlines, gentle pastel light, generous white paper space, slow page-turn transitions.`
+- **Character anchor**: `A storybook stick character: an oversized cream-white round head drawn with a soft graphite pencil outline and a faint warm watercolor shadow, glossy oval eyes, gentle eyebrows, a shy smile and rosy watercolor blush, a small hair tuft, a sunny yellow watercolor raincoat over a thin graphite body, thin pencil limbs with bent elbows and knees, small solid round hands, often holding a red umbrella.`
+- **Palette**: sunny yellow raincoat = hero; red umbrella = comfort/key object; soft sky blue = calm and rain; sage green = growth; blush pink = warmth.
+- **Motion**: slow and gentle; paint washes bloom in to reveal scenes, rain and petals drift, characters walk and turn softly, page-turn or wash-dissolve transitions.
+- **Music**: soft piano, music box, light strings; SFX: gentle rain, page turn, birdsong.
+- **Negatives**: no hard vector edges, no neon or saturated colors, no dark horror tones, no text or letters in the art.
 ---
 
 ## Customizing a character

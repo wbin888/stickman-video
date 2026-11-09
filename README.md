@@ -9,7 +9,7 @@
 ## ✨ 特性
 
 - **导演式两步流程**：分镜（Phase A）确认后才输出提示词（Phase B），避免浪费生成额度。
-- **10 种画风**：极简水笔、彩色扁平、黑板粉笔、白板手绘、霓虹暗夜、纸片剪贴、水墨国风、像素街机、工程蓝图、美漫网点。
+- **10 种画风**：极简水笔、彩色扁平、黑板粉笔、白板手绘、霓虹暗夜、纸片剪贴、水墨国风、粘土定格、工程蓝图、水彩绘本。
 - **角色/旁白一致性**：角色锚点与旁白声音块在每个镜头中逐字重复。
 - **多生成器适配**：Veo、Sora、可灵、海螺、即梦、Runway，以及“先图后视频”路线。
 - **字幕脚本**：`make_srt.py` 把确认后的旁白生成 SRT。
@@ -20,8 +20,8 @@
 <tr><td width="50%" align="center"><strong>S1 · 极简水笔（明/暗）</strong><br><img src="assets/previews/s1-ink.svg" alt="S1 极简水笔（明/暗） 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S2 · 彩色扁平</strong><br><img src="assets/previews/s2-flat-pop.svg" alt="S2 彩色扁平 火柴人画风示意" width="95%"></td></tr>
 <tr><td width="50%" align="center"><strong>S3 · 黑板粉笔</strong><br><img src="assets/previews/s3-chalkboard.svg" alt="S3 黑板粉笔 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S4 · 白板手绘</strong><br><img src="assets/previews/s4-whiteboard.svg" alt="S4 白板手绘 火柴人画风示意" width="95%"></td></tr>
 <tr><td width="50%" align="center"><strong>S5 · 霓虹暗夜</strong><br><img src="assets/previews/s5-neon-night.svg" alt="S5 霓虹暗夜 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S6 · 纸片剪贴</strong><br><img src="assets/previews/s6-paper-cutout.svg" alt="S6 纸片剪贴 火柴人画风示意" width="95%"></td></tr>
-<tr><td width="50%" align="center"><strong>S7 · 水墨国风</strong><br><img src="assets/previews/s7-ink-wash.svg" alt="S7 水墨国风 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S8 · 像素街机</strong><br><img src="assets/previews/s8-pixel-arcade.svg" alt="S8 像素街机 火柴人画风示意" width="95%"></td></tr>
-<tr><td width="50%" align="center"><strong>S9 · 工程蓝图</strong><br><img src="assets/previews/s9-blueprint.svg" alt="S9 工程蓝图 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S10 · 美漫网点</strong><br><img src="assets/previews/s10-comic-halftone.svg" alt="S10 美漫网点 火柴人画风示意" width="95%"></td></tr>
+<tr><td width="50%" align="center"><strong>S7 · 水墨国风</strong><br><img src="assets/previews/s7-ink-wash.svg" alt="S7 水墨国风 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S8 · 粘土定格</strong><br><img src="assets/previews/s8-clay.svg" alt="S8 粘土定格 火柴人画风示意" width="95%"></td></tr>
+<tr><td width="50%" align="center"><strong>S9 · 工程蓝图</strong><br><img src="assets/previews/s9-blueprint.svg" alt="S9 工程蓝图 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S10 · 水彩绘本</strong><br><img src="assets/previews/s10-watercolor.svg" alt="S10 水彩绘本 火柴人画风示意" width="95%"></td></tr>
 </table>
 
 > 以上为各画风的动态示意图（SVG），用来说明构图和配色方向；实际成片由你选择的 AI 视频工具按提示词生成。重新生成预览：`python3 scripts/gen_previews.py`。
@@ -51,9 +51,9 @@ flowchart LR
 | S5 | 霓虹暗夜 | 科技、AI、悬疑 |
 | S6 | 纸片剪贴 | 温暖故事、儿童内容 |
 | S7 | 水墨国风 | 历史、成语、哲理、东方传说 |
-| S8 | 像素街机 | 成长挑战、游戏化、习惯养成 |
+| S8 | 粘土定格 | 生活小剧场、产品演示、儿童科普 |
 | S9 | 工程蓝图 | 工作原理、系统机制、商业模式拆解 |
-| S10 | 美漫网点 | 反转、冲突、热血励志 |
+| S10 | 水彩绘本 | 治愈故事、情感关系、睡前故事 |
 
 详细规范见 [`style-catalog.md`](skills/stickman-video/references/style-catalog.md)。
 
