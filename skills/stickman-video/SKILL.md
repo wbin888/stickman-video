@@ -72,6 +72,7 @@ After the prompt pack, offer once (never block delivery):
 
 - One locked character design per role for the whole video; repeat the full anchor every shot.
 - Stick figures always have **two arms and two legs**; a moving limb replaces its previous pose.
+- Characters follow the **character design grammar** in the style catalog: big round head, expressive face (eyes, brows, mouth change with each beat), thin limbs with elbow/knee bends, small round hands, one signature item and color.
 - Motion is concrete action (run, push, draw, open, fall, point), with a visual change every 2–3 s. No idle standing, no abstract morphing blobs.
 - No visible text, letters, numbers or UI copy in generated footage; no speech bubbles. Narration is audio only.
 - Colors are named in plain words (“warm orange”), never hex/RGB/Pantone.
