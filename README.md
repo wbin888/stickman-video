@@ -36,24 +36,24 @@
 **Claude Code（插件市场）**
 
 ```
-/plugin marketplace add wbin888/Stickman_Video
+/plugin marketplace add wbin888/stickman-video
 /plugin install stickman-video@stickman-video
 ```
 
 **手动安装（Claude Code / Codex / 其他支持 Skills 的 Agent）**
 
 ```bash
-git clone https://github.com/wbin888/Stickman_Video
+git clone https://github.com/wbin888/stickman-video
 # Claude Code
-cp -r Stickman_Video/skills/stickman-video ~/.claude/skills/
+cp -r stickman-video/skills/stickman-video ~/.claude/skills/
 # Codex
-cp -r Stickman_Video/skills/stickman-video ~/.codex/skills/
+cp -r stickman-video/skills/stickman-video ~/.codex/skills/
 ```
 
 也可以直接对 AI 助手说：
 
 ```
-帮我安装这个 Skill：https://github.com/wbin888/Stickman_Video
+帮我安装这个 Skill：https://github.com/wbin888/stickman-video
 ```
 
 ## 🚀 使用
