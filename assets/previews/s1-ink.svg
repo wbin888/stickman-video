@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270"><style>
+.bob{animation:bob 1.2s ease-in-out infinite}
+.wave{transform-box:fill-box;transform-origin:0% 100%;animation:wave .8s ease-in-out infinite alternate}
+.legA{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate}
+.legB{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate-reverse}
+.pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 1.6s ease-in-out infinite}
+.blink{animation:blink 1.4s steps(2) infinite}
+.draw{stroke-dasharray:400;animation:draw 3s linear infinite}
+.spin{transform-box:fill-box;transform-origin:50% 50%;animation:spin 8s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes wave{from{transform:rotate(-25deg)}to{transform:rotate(20deg)}}
+@keyframes step{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes blink{50%{opacity:.35}}
+@keyframes draw{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style><defs></defs><rect width="240" height="270" fill="#fff"/><g class="bob" >
+<g fill="none" stroke="#111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="120" y1="138" x2="120" y2="185"/>
+<line x1="120" y1="150" x2="92" y2="177"/>
+<line class="wave" x1="120" y1="150" x2="162" y2="127"/>
+<line class="legA" x1="120" y1="185" x2="102" y2="225"/>
+<line class="legB" x1="120" y1="185" x2="138" y2="225"/>
+</g>
+<circle cx="120" cy="120" r="18" fill="none" stroke="#111" stroke-width="5"/>
+</g><path class="draw" d="M165 120 L215 70" stroke="#e11d48" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M200 68 L216 68 L216 84" stroke="#e11d48" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="240" width="240" height="270" fill="#000"/><g class="bob" >
+<g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="360" y1="138" x2="360" y2="185"/>
+<line x1="360" y1="150" x2="332" y2="177"/>
+<line class="wave" x1="360" y1="150" x2="402" y2="127"/>
+<line class="legA" x1="360" y1="185" x2="342" y2="225"/>
+<line class="legB" x1="360" y1="185" x2="378" y2="225"/>
+</g>
+<circle cx="360" cy="120" r="18" fill="none" stroke="#fff" stroke-width="5"/>
+</g><g class="pop"><circle cx="425" cy="80" r="18" fill="none" stroke="#3b82f6" stroke-width="5"/><line x1="425" y1="98" x2="425" y2="112" stroke="#3b82f6" stroke-width="5"/></g></svg>

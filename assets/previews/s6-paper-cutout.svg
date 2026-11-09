@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270"><style>
+.bob{animation:bob 1.2s ease-in-out infinite}
+.wave{transform-box:fill-box;transform-origin:0% 100%;animation:wave .8s ease-in-out infinite alternate}
+.legA{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate}
+.legB{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate-reverse}
+.pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 1.6s ease-in-out infinite}
+.blink{animation:blink 1.4s steps(2) infinite}
+.draw{stroke-dasharray:400;animation:draw 3s linear infinite}
+.spin{transform-box:fill-box;transform-origin:50% 50%;animation:spin 8s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes wave{from{transform:rotate(-25deg)}to{transform:rotate(20deg)}}
+@keyframes step{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes blink{50%{opacity:.35}}
+@keyframes draw{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style><defs><filter id="sh"><feDropShadow dx="3" dy="4" stdDeviation="2" flood-opacity=".35"/></filter></defs><rect width="480" height="270" fill="#c8a477"/><circle cx="400" cy="65" r="30" fill="#facc15" filter="url(#sh)"/><path d="M0 200 Q120 140 240 190 T480 170 V270 H0z" fill="#86efac" filter="url(#sh)"/><path d="M0 232 Q160 205 300 236 T480 226 V270 H0z" fill="#4ade80" filter="url(#sh)"/><g class="pop"><path d="M340 150 l25 -40 l25 40 z" fill="#60a5fa" filter="url(#sh)"/><rect x="345" y="150" width="40" height="40" fill="#ef4444" filter="url(#sh)"/></g><g filter="url(#sh)"><g class="bob" >
+<g fill="none" stroke="#1c1917" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="200" y1="138" x2="200" y2="185"/>
+<line x1="200" y1="150" x2="172" y2="177"/>
+<line class="wave" x1="200" y1="150" x2="242" y2="127"/>
+<line class="legA" x1="200" y1="185" x2="182" y2="225"/>
+<line class="legB" x1="200" y1="185" x2="218" y2="225"/>
+</g>
+<circle cx="200" cy="120" r="18" fill="#fff" stroke="#1c1917" stroke-width="5"/><circle cx="194" cy="118" r="2.6" fill="#1c1917"/><circle cx="206" cy="118" r="2.6" fill="#1c1917"/><path d="M194 127 q6 5 12 0" fill="none" stroke="#1c1917" stroke-width="2" stroke-linecap="round"/><circle cx="189" cy="122" r="4" fill="#f9a8d4"/><circle cx="211" cy="122" r="4" fill="#f9a8d4"/><circle cx="200" cy="150" r="3.5" fill="#b45309"/><circle cx="200" cy="185" r="3.5" fill="#b45309"/>
+</g></g></svg>

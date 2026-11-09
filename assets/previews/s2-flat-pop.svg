@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270"><style>
+.bob{animation:bob 1.2s ease-in-out infinite}
+.wave{transform-box:fill-box;transform-origin:0% 100%;animation:wave .8s ease-in-out infinite alternate}
+.legA{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate}
+.legB{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate-reverse}
+.pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 1.6s ease-in-out infinite}
+.blink{animation:blink 1.4s steps(2) infinite}
+.draw{stroke-dasharray:400;animation:draw 3s linear infinite}
+.spin{transform-box:fill-box;transform-origin:50% 50%;animation:spin 8s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes wave{from{transform:rotate(-25deg)}to{transform:rotate(20deg)}}
+@keyframes step{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes blink{50%{opacity:.35}}
+@keyframes draw{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style><defs></defs><rect width="480" height="270" fill="#bfeee0"/><circle cx="390" cy="65" r="34" fill="#fde68a"/><rect class="pop" x="320" y="160" width="60" height="60" rx="10" fill="#a78bfa"/><circle class="pop" cx="420" cy="195" r="24" fill="#60a5fa"/><rect y="230" width="480" height="40" fill="#99dcc8"/><g class="bob" >
+<g fill="none" stroke="#111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="240" y1="143" x2="240" y2="190"/>
+<line x1="240" y1="155" x2="212" y2="182"/>
+<line class="wave" x1="240" y1="155" x2="282" y2="132"/>
+<line class="legA" x1="240" y1="190" x2="222" y2="230"/>
+<line class="legB" x1="240" y1="190" x2="258" y2="230"/>
+</g><path d="M226 152 h28 l5 40 h-38 z" fill="#f97316" stroke="#111" stroke-width="3"/>
+<circle cx="240" cy="125" r="18" fill="#fff" stroke="#111" stroke-width="5"/><circle cx="234" cy="123" r="2.6" fill="#111"/><circle cx="246" cy="123" r="2.6" fill="#111"/><path d="M234 132 q6 5 12 0" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+</g></svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270"><style>
+.bob{animation:bob 1.2s ease-in-out infinite}
+.wave{transform-box:fill-box;transform-origin:0% 100%;animation:wave .8s ease-in-out infinite alternate}
+.legA{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate}
+.legB{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate-reverse}
+.pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 1.6s ease-in-out infinite}
+.blink{animation:blink 1.4s steps(2) infinite}
+.draw{stroke-dasharray:400;animation:draw 3s linear infinite}
+.spin{transform-box:fill-box;transform-origin:50% 50%;animation:spin 8s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes wave{from{transform:rotate(-25deg)}to{transform:rotate(20deg)}}
+@keyframes step{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes blink{50%{opacity:.35}}
+@keyframes draw{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2.4" fill="#000" opacity=".22"/></pattern></defs><rect width="480" height="270" fill="#fde047"/><path d="M240 135 L840 135 L831 239Z" fill="#ef4444"/><path d="M240 135 L804 340 L760 435Z" fill="#ef4444"/><path d="M240 135 L700 521 L626 595Z" fill="#ef4444"/><path d="M240 135 L540 655 L445 699Z" fill="#ef4444"/><path d="M240 135 L344 726 L240 735Z" fill="#ef4444"/><path d="M240 135 L136 726 L35 699Z" fill="#ef4444"/><path d="M240 135 L-60 655 L-146 595Z" fill="#ef4444"/><path d="M240 135 L-220 521 L-280 435Z" fill="#ef4444"/><path d="M240 135 L-324 340 L-351 239Z" fill="#ef4444"/><path d="M240 135 L-360 135 L-351 31Z" fill="#ef4444"/><path d="M240 135 L-324 -70 L-280 -165Z" fill="#ef4444"/><path d="M240 135 L-220 -251 L-146 -325Z" fill="#ef4444"/><path d="M240 135 L-60 -385 L35 -429Z" fill="#ef4444"/><path d="M240 135 L136 -456 L240 -465Z" fill="#ef4444"/><path d="M240 135 L344 -456 L445 -429Z" fill="#ef4444"/><path d="M240 135 L540 -385 L626 -325Z" fill="#ef4444"/><path d="M240 135 L700 -251 L760 -165Z" fill="#ef4444"/><path d="M240 135 L804 -70 L831 31Z" fill="#ef4444"/><rect width="480" height="270" fill="url(#dots)"/><line class="blink" x1="20" y1="40" x2="110" y2="40" stroke="#fff" stroke-width="4" style="animation-delay:0.20s"/><line class="blink" x1="20" y1="66" x2="110" y2="66" stroke="#fff" stroke-width="4" style="animation-delay:0.33s"/><line class="blink" x1="20" y1="92" x2="110" y2="92" stroke="#fff" stroke-width="4" style="animation-delay:0.46s"/><line class="blink" x1="20" y1="118" x2="110" y2="118" stroke="#fff" stroke-width="4" style="animation-delay:0.59s"/><line class="blink" x1="20" y1="144" x2="110" y2="144" stroke="#fff" stroke-width="4" style="animation-delay:0.72s"/><line class="blink" x1="20" y1="170" x2="110" y2="170" stroke="#fff" stroke-width="4" style="animation-delay:0.85s"/><line class="blink" x1="20" y1="196" x2="110" y2="196" stroke="#fff" stroke-width="4" style="animation-delay:0.98s"/><line class="blink" x1="20" y1="222" x2="110" y2="222" stroke="#fff" stroke-width="4" style="animation-delay:1.11s"/><g class="pop"><path d="M370 55 l15 30 l32 -6 l-20 26 l22 24 l-32 -2 l-8 32 l-14 -28 l-30 10 l14 -28 l-24 -20 l32 -2z" fill="#fff" stroke="#111" stroke-width="5"/></g><g class="bob" >
+<g fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+<line x1="240" y1="138" x2="240" y2="185"/>
+<line x1="240" y1="150" x2="212" y2="177"/>
+<line class="wave" x1="240" y1="150" x2="282" y2="127"/>
+<line class="legA" x1="240" y1="185" x2="222" y2="225"/>
+<line class="legB" x1="240" y1="185" x2="258" y2="225"/>
+</g><path d="M232 140 q-30 -2 -50 14 q22 -3 34 4" fill="#facc15" stroke="#111" stroke-width="4"/>
+<circle cx="240" cy="120" r="18" fill="#fff" stroke="#111" stroke-width="8"/><circle cx="234" cy="118" r="2.6" fill="#111"/><circle cx="246" cy="118" r="2.6" fill="#111"/><path d="M234 127 q6 5 12 0" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/><path d="M228 110 l8 3 M252 110 l-8 3" stroke="#111" stroke-width="3"/>
+</g><rect x="4" y="4" width="472" height="262" fill="none" stroke="#111" stroke-width="8"/></svg>

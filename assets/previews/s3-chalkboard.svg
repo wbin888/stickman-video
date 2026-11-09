@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270"><style>
+.bob{animation:bob 1.2s ease-in-out infinite}
+.wave{transform-box:fill-box;transform-origin:0% 100%;animation:wave .8s ease-in-out infinite alternate}
+.legA{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate}
+.legB{transform-box:fill-box;transform-origin:50% 0%;animation:step .6s ease-in-out infinite alternate-reverse}
+.pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 1.6s ease-in-out infinite}
+.blink{animation:blink 1.4s steps(2) infinite}
+.draw{stroke-dasharray:400;animation:draw 3s linear infinite}
+.spin{transform-box:fill-box;transform-origin:50% 50%;animation:spin 8s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes wave{from{transform:rotate(-25deg)}to{transform:rotate(20deg)}}
+@keyframes step{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes blink{50%{opacity:.35}}
+@keyframes draw{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style><defs><filter id="chalk"><feTurbulence baseFrequency="0.9" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 -.3"/></filter><filter id="rough"><feTurbulence baseFrequency="0.05" numOctaves="2"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter></defs><rect width="480" height="270" fill="#1f3b2d"/><rect width="480" height="270" filter="url(#chalk)" opacity=".25"/><rect y="255" width="480" height="15" fill="#6b4f2a"/><g filter="url(#rough)"><g class="bob" >
+<g fill="none" stroke="#f5f5f4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="140" y1="148" x2="140" y2="195"/>
+<line x1="140" y1="160" x2="112" y2="187"/>
+<line class="wave" x1="140" y1="160" x2="182" y2="137"/>
+<line class="legA" x1="140" y1="195" x2="122" y2="235"/>
+<line class="legB" x1="140" y1="195" x2="158" y2="235"/>
+</g>
+<circle cx="140" cy="130" r="18" fill="none" stroke="#f5f5f4" stroke-width="5"/><circle cx="134" cy="128" r="2.6" fill="#f5f5f4"/><circle cx="146" cy="128" r="2.6" fill="#f5f5f4"/><path d="M134 137 q6 5 12 0" fill="none" stroke="#f5f5f4" stroke-width="2" stroke-linecap="round"/>
+</g><path class="draw" d="M190 110 Q270 50 330 110" stroke="#fde047" stroke-width="4" fill="none"/><circle cx="380" cy="150" r="38" fill="none" stroke="#f9a8d4" stroke-width="4"/><circle cx="380" cy="150" r="9" fill="#93c5fd"/><g class="spin"><ellipse cx="380" cy="150" rx="62" ry="20" fill="none" stroke="#93c5fd" stroke-width="3"/></g></g></svg>

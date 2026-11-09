@@ -14,6 +14,32 @@
 - **多生成器适配**：Veo、Sora、可灵、海螺、即梦、Runway，以及“先图后视频”路线。
 - **字幕脚本**：`make_srt.py` 把确认后的旁白生成 SRT。
 
+## 🖼 画风预览
+
+<table width="100%">
+<tr><td width="50%" align="center"><strong>S1 · 极简水笔（明/暗）</strong><br><img src="assets/previews/s1-ink.svg" alt="S1 极简水笔（明/暗） 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S2 · 彩色扁平</strong><br><img src="assets/previews/s2-flat-pop.svg" alt="S2 彩色扁平 火柴人画风示意" width="95%"></td></tr>
+<tr><td width="50%" align="center"><strong>S3 · 黑板粉笔</strong><br><img src="assets/previews/s3-chalkboard.svg" alt="S3 黑板粉笔 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S4 · 白板手绘</strong><br><img src="assets/previews/s4-whiteboard.svg" alt="S4 白板手绘 火柴人画风示意" width="95%"></td></tr>
+<tr><td width="50%" align="center"><strong>S5 · 霓虹暗夜</strong><br><img src="assets/previews/s5-neon-night.svg" alt="S5 霓虹暗夜 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S6 · 纸片剪贴</strong><br><img src="assets/previews/s6-paper-cutout.svg" alt="S6 纸片剪贴 火柴人画风示意" width="95%"></td></tr>
+<tr><td width="50%" align="center"><strong>S7 · 水墨国风</strong><br><img src="assets/previews/s7-ink-wash.svg" alt="S7 水墨国风 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S8 · 像素街机</strong><br><img src="assets/previews/s8-pixel-arcade.svg" alt="S8 像素街机 火柴人画风示意" width="95%"></td></tr>
+<tr><td width="50%" align="center"><strong>S9 · 工程蓝图</strong><br><img src="assets/previews/s9-blueprint.svg" alt="S9 工程蓝图 火柴人画风示意" width="95%"></td><td width="50%" align="center"><strong>S10 · 美漫网点</strong><br><img src="assets/previews/s10-comic-halftone.svg" alt="S10 美漫网点 火柴人画风示意" width="95%"></td></tr>
+</table>
+
+> 以上为各画风的动态示意图（SVG），用来说明构图和配色方向；实际成片由你选择的 AI 视频工具按提示词生成。重新生成预览：`python3 scripts/gen_previews.py`。
+
+## 🔄 工作流程
+
+```mermaid
+flowchart LR
+    A[话题 / 文章 / 脚本] --> B{确认需求<br/>比例·画风·时长·生成器}
+    B --> C[分镜 Phase A<br/>角色卡·旁白·镜头表]
+    C -->|你确认| D[提示词包 Phase B<br/>逐镜头提示词·衔接指南]
+    C -->|修改| C
+    D --> E[AI 视频工具生成片段]
+    D --> F[后期包<br/>SRT 字幕·剪辑指南·封面文案]
+    E --> G[剪辑成片]
+    F --> G
+```
+
 ## 🎨 画风一览
 
 | ID | 画风 | 适合内容 |
@@ -82,6 +108,8 @@ python3 skills/stickman-video/scripts/make_srt.py \
 ## 🗂 目录结构
 
 ```
+assets/previews/                 # README 画风预览图
+scripts/gen_previews.py          # 生成预览图
 skills/stickman-video/
 ├── SKILL.md                     # 技能入口
 ├── agents/openai.yaml           # Codex 展示信息
