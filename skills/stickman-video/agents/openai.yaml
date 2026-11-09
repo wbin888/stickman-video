@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stickman_Video"
+  short_description: "Storyboard stickman videos and generate per-shot AI video prompts"
+  default_prompt: "Use $stickman-video to turn my topic into a stickman video: confirm ratio and style, show the storyboard for approval, then give per-shot prompts, subtitles and an edit guide."
